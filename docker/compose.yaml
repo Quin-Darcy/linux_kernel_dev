@@ -1,0 +1,15 @@
+services:
+  kernel-build:
+    privileged: true
+    tty: true
+    hostname: "DOCKER-BOX"
+    environment:
+      - DISPLAY
+    build:
+      context: .
+      args:
+        USER_UID: ${UID}
+        USER_GID: ${GID}
+      dockerfile: ./Dockerfile
+    volumes:
+      - ../kernel-workspace:/linux
