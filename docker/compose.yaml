@@ -11,5 +11,8 @@ services:
         USER_UID: ${UID}
         USER_GID: ${GID}
       dockerfile: ./Dockerfile
+    image: pohmsuindraguli/kernel-dev:latest
+    command: /bin/bash
+    stdin_open: true
     volumes:
       - ../kernel-workspace:/linux
