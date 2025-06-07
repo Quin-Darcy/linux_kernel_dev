@@ -19,6 +19,8 @@ RUN apt-get install -y git
 RUN apt-get install -y wget
 RUN apt-get install -y curl
 RUN apt-get install -y sudo
+RUN apt-get install -y file
+RUN apt-get install -y genisoimage
 
 RUN apt-get install -y iproute2
 RUN apt-get install -y netcat-openbsd
